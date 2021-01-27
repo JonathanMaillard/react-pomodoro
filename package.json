@@ -1,6 +1,6 @@
 {
   "name": "@jona1995/react-pomodoro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple pomodoro timer built with react",
   "private": true,
   "main": "index.js",
