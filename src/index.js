@@ -2,7 +2,7 @@
 
 //console.log("hiil");
 
-import React from "react";
+/*import React from "react";
 import { render } from "react-dom";
 class HelloMessage extends React.Component {
     render() {
@@ -17,7 +17,6 @@ class HelloMessage extends React.Component {
   render(
     <HelloMessage name="Taylor" />,
     document.getElementById('hello-example')
-  );
-
+  );*/
 
 //console.log("yo");
