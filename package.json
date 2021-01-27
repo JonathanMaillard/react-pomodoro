@@ -1,7 +1,8 @@
 {
-  "name": "react-pomodoro",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@jona1995/react-pomodoro",
+  "version": "0.1.0",
+  "description": "A simple pomodoro timer built with react",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
+    "@babel/preset-react": "^7.12.10",
     "@becode/eslint-config": "^0.12.1",
     "eslint": "^7.18.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -41,5 +43,14 @@
     "hooks": {
       "pre-commit": "npx lint-staged"
     }
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   }
 }
