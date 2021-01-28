@@ -1,19 +1,26 @@
-console.log("hello world");
-
-console.log("hiil");
-
 import React from "react";
-import {render} from "react-dom";
+import ReactDOM from "react-dom";
 
-class HelloMessage extends React.Component {
-    render() {
-        return <div>{`Hello${this.props.name}`}</div>;
-    }
-}
+/*function Welcome (props) {
+  return <h1>Bonjour</h1>
+}*/
 
-render(
-    <HelloMessage name={"Taylor"} />,
-    document.querySelector("#hello-example"),
+const Timer = () => (
+    <div className={"container"}>
+        <div className={"time"}>
+            <span className={"minute"}>{"00"}</span>
+            <span>{":"}</span>
+            <span className={"second"}>{"00"}</span>
+        </div>
+        <div className={"buttons"}>
+            <button onClick={() => null} className={"start"}>
+                {"Start"}
+            </button>
+            <button onClick={() => null} className={"reset"}>
+                {"Reset"}
+            </button>
+        </div>
+    </div>
 );
 
-//console.log("yo");
+ReactDOM.render(<Timer />, document.querySelector("#timer"));
