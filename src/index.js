@@ -46,15 +46,19 @@ const Timer = () => {
             <div className={"buttons"}>
                 <button
                     onClick={() => {
-                        const counterPlus = counter + 60;
-                        setCounter(counterPlus);
+                        if (!isActive) {
+                            const counterPlus = counter + 60;
+                            setCounter(counterPlus);
 
-                        if (Number(minute) + 1 < 10) {
-                            const minutePlus = String(`0${Number(minute) + 1}`);
-                            setMinute(minutePlus);
-                        } else {
-                            const minutePlus = String(Number(minute) + 1);
-                            setMinute(minutePlus);
+                            if (Number(minute) + 1 < 10) {
+                                const minutePlus = String(
+                                    `0${Number(minute) + 1}`,
+                                );
+                                setMinute(minutePlus);
+                            } else {
+                                const minutePlus = String(Number(minute) + 1);
+                                setMinute(minutePlus);
+                            }
                         }
                     }}
                     className={"plus"}>
@@ -63,7 +67,7 @@ const Timer = () => {
                 <button
                     onClick={() => setIsActive(!isActive)}
                     className={"start"}>
-                    {isActive ? "Pause" : "Start"}
+                    {isActive ? "STOP" : "START"}
                 </button>
                 <button onClick={() => null} className={"reset"}>
                     {"Reset"}
