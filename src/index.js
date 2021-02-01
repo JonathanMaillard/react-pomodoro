@@ -33,8 +33,20 @@ const Timer = () => {
             }, 1000);
         }
 
+        if (isActive && counter < 0) {
+            setIsActive(!isActive);
+            setCounter(0);
+        }
+
         return () => clearInterval(intervalId);
     }, [isActive, counter]);
+
+    function reset() {
+        setIsActive(false);
+        setCounter(0);
+        setSecond("00");
+        setMinute("00");
+    }
 
     return (
         <div className={"container"}>
@@ -69,8 +81,28 @@ const Timer = () => {
                     className={"start"}>
                     {isActive ? "STOP" : "START"}
                 </button>
-                <button onClick={() => null} className={"reset"}>
-                    {"Reset"}
+                <button onClick={reset} className={"reset"}>
+                    {"RESET"}
+                </button>
+                <button
+                    onClick={() => {
+                        if (!isActive && counter >= 60) {
+                            const counterMinus = counter - 60;
+                            setCounter(counterMinus);
+
+                            if (Number(minute) - 1 < 10) {
+                                const minuteMinus = String(
+                                    `0${Number(minute) - 1}`,
+                                );
+                                setMinute(minuteMinus);
+                            } else {
+                                const minuteMinus = String(Number(minute) - 1);
+                                setMinute(minuteMinus);
+                            }
+                        }
+                    }}
+                    className={"minus"}>
+                    {"-"}
                 </button>
             </div>
         </div>
