@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
+import Modal from "./modal.js";
 
 const Timer = () => {
     const [second, setSecond] = useState("00");
@@ -36,6 +37,7 @@ const Timer = () => {
         if (isActive && counter < 0) {
             setIsActive(!isActive);
             setCounter(0);
+            ReactDOM.render(<Modal />, document.querySelector("#modal"));
         }
 
         return () => clearInterval(intervalId);
@@ -82,7 +84,7 @@ const Timer = () => {
         <div className={"container"}>
             <div className={"time"}>
                 <span className={"minute"}>{minute}</span>
-                <span>{":"}</span>
+                {":"}
                 <span className={"second"}>{second}</span>
             </div>
             <div className={"buttons"}>
@@ -106,3 +108,4 @@ const Timer = () => {
 };
 
 ReactDOM.render(<Timer />, document.querySelector("#timer"));
+//ReactDOM.render(<Modal />, document.querySelector("#modal"));
