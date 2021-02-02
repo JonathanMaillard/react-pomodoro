@@ -8,8 +8,6 @@ const Modal = () => {
 
     function restart() {
         ReactDOM.render("", document.querySelector("#modal"));
-        //Timer.setCounter(60);
-        //Timer.setIsActive(true);
     }
 
     return (

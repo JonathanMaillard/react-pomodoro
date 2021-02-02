@@ -108,4 +108,3 @@ const Timer = () => {
 };
 
 ReactDOM.render(<Timer />, document.querySelector("#timer"));
-//ReactDOM.render(<Modal />, document.querySelector("#modal"));
