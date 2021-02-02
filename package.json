@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "A simple pomodoro timer built with react",
   "private": true,
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx parcel src/index.html"
