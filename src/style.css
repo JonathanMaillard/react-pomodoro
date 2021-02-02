@@ -85,3 +85,8 @@ button:active {
     border-radius: 5px;
     width: fit-content;
 }
+
+
+.modal_buttons button{
+    width: 150px;
+}

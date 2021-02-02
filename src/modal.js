@@ -15,7 +15,7 @@ const Modal = () => {
     return (
         <div className={"main_modal"}>
             <div className={"inner_modal"}>
-                <p>{"LE TAN HAIE AYKOULé"}</p>
+                <p>{"Time's Up ! BREAKTIME !"}</p>
                 <div className={"modal_buttons"}>
                     <button onClick={restart} className={"restart"}>
                         {"RESTART"}
